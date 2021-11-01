@@ -4,3 +4,14 @@
 - A függvény neve `generateList` legyen!
 - A HTML-template egy lista, amelynek a listaelemei a kapott tömb értékeit tartalmazzák.
 */
+'use strict'
+const generateList = (tomb) => {
+    let a = '';
+    tomb.forEach(item => {
+        a = a + "<li>" + item + "</li>";
+        return a;
+    });
+    return "<ul>" + a + "</ul>";
+}
+
+//console.log(generateList(["első", "masodik", "harmadik"]));
