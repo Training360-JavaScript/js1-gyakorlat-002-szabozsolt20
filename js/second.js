@@ -15,3 +15,14 @@ hogy a tömb minden eleme number típusú-e vagy sem
 - `someElementsAreNumbers`: Értéke true/false attól függően, 
 hogy a tömbben van-e number típusú elem vagy sem
 */
+'use strict'
+const checker = (tomb, a) => {
+    //const exist_v=tomb.some(item=>item==a);
+    //findIndex(item=>item==a) != -1;
+    return {
+        exists: tomb.some(item => item == a),
+        index: tomb.findIndex(item => item == a),
+        allElementsAreNumbers: tomb.every(item => !isNaN(item)), //!tomb.some(item => isNaN(item)),
+        someElementsAreNumbers: tomb.some(item => !isNaN(item)), //!tomb.every(item => isNaN(item))
+    }
+}
